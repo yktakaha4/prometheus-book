@@ -13,7 +13,7 @@ services:
   httpd:
     image: httpd:2.4
     ports:
-      - '80:80'
+      - '8888:80'
     volumes:
       - './httpd.conf:/usr/local/apache2/conf/httpd.conf'
   apache_exporter:
