@@ -5,6 +5,6 @@ groups:
         expr: up == 0
         for: 10s
         labels:
-          serverity: error
+          severity: error
         annotations:
           summary: monitoring target failed.
