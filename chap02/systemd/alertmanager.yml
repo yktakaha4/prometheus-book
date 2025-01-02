@@ -1,0 +1,16 @@
+global:
+    resolve_timeout: 5m
+
+route:
+    group_by: ['alertname']
+    group_wait: 10s
+    group_interval: 10s
+    repeat_interval: 1h
+    receiver: 'mail'
+receivers:
+  - name: 'mail'
+    email_configs:
+      - to: 'admin@example.com'
+        from: 'alert@example.com'
+        smarthost: 'host.docker.internal:1025'
+        require_tls: false
