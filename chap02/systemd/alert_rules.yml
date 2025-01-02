@@ -1,0 +1,10 @@
+groups:
+  - name: target_status
+    rules:
+      - alert: scrape_failed
+        expr: up == 0
+        for: 10s
+        labels:
+          serverity: error
+        annotations:
+          summary: monitoring target failed.
